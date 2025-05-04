@@ -131,89 +131,89 @@
 
 // // export default ShoppingCart;
 
-"use client";
+// "use client";
 
-import React, { useState } from "react";
+// import React, { useState } from "react";
 
-const questions = [
-  {
-    question: "What is the capital of France?",
-    options: ["Berlin", "Madrid", "Paris", "London"],
-    answer: "Paris",
-  },
-  {
-    question: "Which language runs in a web browser?",
-    options: ["Python", "C", "Java", "JavaScript"],
-    answer: "JavaScript",
-  },
-  {
-    question: "What does CSS stand for?",
-    options: [
-      "Central Style Sheet",
-      "Cascading Style Sheets",
-      "Computer Style System",
-      "Creative Style Syntax",
-    ],
-    answer: "Cascading Style Sheets",
-  },
-  {
-    question: "What is the color of the sky on a clear day?",
-    options: ["Red", "Blue", "Green", "Yellow"],
-    answer: "Blue",
-  },
-  {
-    question: "What is the largest mammal on Earth?",
-    options: ["Elephant", "Blue Whale", "Shark", "Giraffe"],
-    answer: "Blue Whale",
-  },
-];
+// const questions = [
+//   {
+//     question: "What is the capital of France?",
+//     options: ["Berlin", "Madrid", "Paris", "London"],
+//     answer: "Paris",
+//   },
+//   {
+//     question: "Which language runs in a web browser?",
+//     options: ["Python", "C", "Java", "JavaScript"],
+//     answer: "JavaScript",
+//   },
+//   {
+//     question: "What does CSS stand for?",
+//     options: [
+//       "Central Style Sheet",
+//       "Cascading Style Sheets",
+//       "Computer Style System",
+//       "Creative Style Syntax",
+//     ],
+//     answer: "Cascading Style Sheets",
+//   },
+//   {
+//     question: "What is the color of the sky on a clear day?",
+//     options: ["Red", "Blue", "Green", "Yellow"],
+//     answer: "Blue",
+//   },
+//   {
+//     question: "What is the largest mammal on Earth?",
+//     options: ["Elephant", "Blue Whale", "Shark", "Giraffe"],
+//     answer: "Blue Whale",
+//   },
+// ];
 
-export default function QuizApp() {
-  const [currentQuestion, setCurrentQuestion] = useState(0);
-  const [score, setScore] = useState(0);
-  const [showScore, setShowScore] = useState(false);
+// export default function QuizApp() {
+//   const [currentQuestion, setCurrentQuestion] = useState(0);
+//   const [score, setScore] = useState(0);
+//   const [showScore, setShowScore] = useState(false);
 
-  const handleAnswer = (selected) => {
-    if (selected === questions[currentQuestion].answer) {
-      setScore(score + 1);
-    }
+//   const handleAnswer = (selected) => {
+//     if (selected === questions[currentQuestion].answer) {
+//       setScore(score + 1);
+//     }
 
-    const next = currentQuestion + 1;
-    if (next < questions.length) {
-      setCurrentQuestion(next);
-    } else {
-      setShowScore(true);
-    }
-  };
+//     const next = currentQuestion + 1;
+//     if (next < questions.length) {
+//       setCurrentQuestion(next);
+//     } else {
+//       setShowScore(true);
+//     }
+//   };
 
-  return (
-    <div className="max-w-xl mx-auto mt-10 p-6 rounded-2xl  text-center">
-      {showScore ? (
-        <div>
-          <h2 className="text-2xl font-bold mb-4">Quiz Completed </h2>
-          <p className="text-xl">
-            Your Score: {score} / {questions.length}
-          </p>
-        </div>
-      ) : (
-        <div>
-          <h2 className="text-xl font-semibold mb-4">
-            Question {currentQuestion + 1} of {questions.length}
-          </h2>
-          <p className="text-lg mb-4">{questions[currentQuestion].question}</p>
-          <div className="grid gap-4">
-            {questions[currentQuestion].options.map((option, index) => (
-              <button
-                key={index}
-                className="bg-red-500 text-white px-2 py-2 "
-                onClick={() => handleAnswer(option)}
-              >
-                {option}
-              </button>
-            ))}
-          </div>
-        </div>
-      )}
-    </div>
-  );
-}
+//   return (
+//     <div className="max-w-xl mx-auto mt-10 p-6 rounded-2xl  text-center">
+//       {showScore ? (
+//         <div>
+//           <h2 className="text-2xl font-bold mb-4">Quiz Completed </h2>
+//           <p className="text-xl">
+//             Your Score: {score} / {questions.length}
+//           </p>
+//         </div>
+//       ) : (
+//         <div>
+//           <h2 className="text-xl font-semibold mb-4">
+//             Question {currentQuestion + 1} of {questions.length}
+//           </h2>
+//           <p className="text-lg mb-4">{questions[currentQuestion].question}</p>
+//           <div className="grid gap-4">
+//             {questions[currentQuestion].options.map((option, index) => (
+//               <button
+//                 key={index}
+//                 className="bg-red-500 text-white px-2 py-2 "
+//                 onClick={() => handleAnswer(option)}
+//               >
+//                 {option}
+//               </button>
+//             ))}
+//           </div>
+//         </div>
+//       )}
+//     </div>
+//   );
+// }
